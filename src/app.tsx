@@ -22,8 +22,6 @@ const locations: Poi[] = [
   { key: "waterloo", location: { lat: 53.3305, lng: -6.24445 } },
 ];
 
-const API_KEY
-const MAP_ID
 
 const PoiMarkers = (props: { pois: Poi[] }) => {
   return (
@@ -95,13 +93,14 @@ const GeolocatedMap = () => {
       {/*<p>Coordinates: {coords.latitude}, {coords.longitude}</p>*/}
       {center ? (
         <APIProvider
-          apiKey={API_KEY}
+          apiKey={'API_KEY'}
           onLoad={handleApiLoaded}
           onError={handleApiLoadError}
         >
           <div style={{ height: "400px", width: "100%" }}>
             <Map
               defaultCenter={center}
+              mapId='MAP_ID'
               defaultZoom={13}
               gestureHandling={"greedy"}
               disableDefaultUI={true}
