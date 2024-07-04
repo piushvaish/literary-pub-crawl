@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { createRoot } from "react-dom/client";
 import { useGeolocated } from "react-geolocated";
 import {
@@ -7,40 +7,78 @@ import {
   Marker,
   AdvancedMarker,
   Pin,
+  InfoWindow,
+  useAdvancedMarkerRef
 } from "@vis.gl/react-google-maps";
 
-type Poi = { key: string; location: google.maps.LatLngLiteral };
+type Poi = {
+  key: string;
+  location: google.maps.LatLngLiteral;
+  name: string;
+  description: string;
+};
+
 const locations: Poi[] = [
-  { key: "bleedingHorse", location: { lat: 53.33354, lng: -6.2649 } },
-  { key: "D2", location: { lat: 53.33438, lng: -6.26288 } },
-  { key: "nearys", location: { lat: 53.34074, lng: -6.26119 } },
-  { key: "davyByrnes", location: { lat: 53.34183, lng: -6.25936 } },
-  { key: "duke", location: { lat: 53.34195, lng: -6.25869 } },
-  { key: "mcdaids", location: { lat: 53.34125, lng: -6.261 } },
-  { key: "toners", location: { lat: 53.33775, lng: -6.25242 } },
-  { key: "waterloo", location: { lat: 53.3305, lng: -6.24445 } },
+  { key: "bleedingHorse", location: { lat: 53.33354, lng: -6.2649 }, name: "Bleeding Horse", description: "Historic pub on Camden Street" },
+  { key: "D2", location: { lat: 53.33438, lng: -6.26288 }, name: "D2", description: "Nightclub on Harcourt Street" },
+  { key: "nearys", location: { lat: 53.34074, lng: -6.26119 }, name: "Neary's", description: "Traditional Irish pub" },
+  { key: "davyByrnes", location: { lat: 53.34183, lng: -6.25936 }, name: "Davy Byrnes", description: "Famous for its mention in James Joyce's Ulysses" },
+  { key: "duke", location: { lat: 53.34195, lng: -6.25869 }, name: "The Duke", description: "Popular pub on Duke Street" },
+  { key: "mcdaids", location: { lat: 53.34125, lng: -6.261 }, name: "McDaid's", description: "Literary pub frequented by famous Irish writers" },
+  { key: "toners", location: { lat: 53.33775, lng: -6.25242 }, name: "Toner's", description: "One of Dublin's oldest and most famous pubs" },
+  { key: "waterloo", location: { lat: 53.3305, lng: -6.24445 }, name: "Waterloo", description: "Bar known for its live music" },
 ];
 
+const MarkerWithInfoWindow = ({ poi }: { poi: Poi }) => {
+  const [markerRef, marker] = useAdvancedMarkerRef();
+  const [infoWindowShown, setInfoWindowShown] = useState(false);
+
+  const handleMarkerClick = useCallback(
+    () => setInfoWindowShown(isShown => !isShown),
+    []
+  );
+
+  const handleClose = useCallback(() => setInfoWindowShown(false), []);
+
+  return (
+    <>
+      <AdvancedMarker
+        ref={markerRef}
+        position={poi.location}
+        onClick={handleMarkerClick}
+      >
+        <Pin
+          background={"#08a04b"}
+          glyphColor={"#000"}
+          borderColor={"#000"}
+        />
+      </AdvancedMarker>
+
+      {infoWindowShown && (
+        <InfoWindow anchor={marker} onClose={handleClose}>
+          <div>
+            <h2>{poi.name}</h2>
+            <p>{poi.description}</p>
+          </div>
+        </InfoWindow>
+      )}
+    </>
+  );
+};
 
 const PoiMarkers = (props: { pois: Poi[] }) => {
   return (
     <>
       {props.pois.map((poi: Poi) => (
-        <AdvancedMarker key={poi.key} position={poi.location}>
-          <Pin
-            background={"#08a04b"}
-            glyphColor={"#000"}
-            borderColor={"#000"}
-          />
-        </AdvancedMarker>
+        <MarkerWithInfoWindow key={poi.key} poi={poi} />
       ))}
     </>
   );
 };
 
 const GeolocatedMap = () => {
-  const [center, setCenter] = useState(null);
-  const [error, setError] = useState(null);
+  const [center, setCenter] = useState<google.maps.LatLngLiteral | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   const { coords, isGeolocationAvailable, isGeolocationEnabled } =
     useGeolocated({
@@ -80,7 +118,7 @@ const GeolocatedMap = () => {
     console.log("Google Maps API has loaded successfully.");
   };
 
-  const handleApiLoadError = (error) => {
+  const handleApiLoadError = (error: Error) => {
     console.error("Error loading Google Maps API:", error);
     setError(
       "Failed to load Google Maps. Please check your API key and network connection."
@@ -89,7 +127,6 @@ const GeolocatedMap = () => {
 
   return (
     <div>
-      {/*<p>Coordinates: {coords.latitude}, {coords.longitude}</p>*/}
       {center ? (
         <APIProvider
           apiKey={process.env.REACT_APP_GOOGLEPLACES_API_KEY || ''}
@@ -124,7 +161,7 @@ const App = () => (
   </div>
 );
 
-const root = createRoot(document.getElementById("app"));
+const root = createRoot(document.getElementById("app")!);
 root.render(<App />);
 
 export default App;
