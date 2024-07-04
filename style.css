@@ -123,8 +123,25 @@ blockquote {
     background: var(--irish-white);
     border-left: 5px solid var(--irish-orange);
     margin: 1.5rem 0;
-    padding: 1rem;
+    padding: 1.5rem;
     font-style: italic;
+    position: relative;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 4em;
+    font-family: Georgia, serif;
+    color: var(--irish-green);
+    opacity: 0.3;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+
+blockquote p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
 }
 
 blockquote footer {
@@ -134,6 +151,12 @@ blockquote footer {
     color: var(--irish-green);
 }
 
+blockquote footer cite {
+    font-style: normal;
+    font-weight: normal;
+    color: var(--text-color);
+}
+
 /* List Styles */
 ul {
     list-style-type: none;
@@ -141,9 +164,11 @@ ul {
 }
 
 ul li {
-    background: url('shamrock.png') no-repeat left center;
+    background: url('shamrock.png') no-repeat left 5px;
+    background-size: 20px;
     padding-left: 30px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
 }
 
 /* App Section */
