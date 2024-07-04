@@ -16,7 +16,6 @@ const locations: Poi[] = [
   { key: "nearys", location: { lat: 53.34074, lng: -6.26119 } },
   { key: "davyByrnes", location: { lat: 53.34183, lng: -6.25936 } },
   { key: "duke", location: { lat: 53.34195, lng: -6.25869 } },
-  { key: "davyByrnes", location: { lat: 53.34183, lng: -6.25936 } },
   { key: "mcdaids", location: { lat: 53.34125, lng: -6.261 } },
   { key: "toners", location: { lat: 53.33775, lng: -6.25242 } },
   { key: "waterloo", location: { lat: 53.3305, lng: -6.24445 } },
@@ -93,14 +92,14 @@ const GeolocatedMap = () => {
       {/*<p>Coordinates: {coords.latitude}, {coords.longitude}</p>*/}
       {center ? (
         <APIProvider
-          apiKey={'API_KEY'}
+          apiKey={process.env.REACT_APP_GOOGLEPLACES_API_KEY || ''}
           onLoad={handleApiLoaded}
           onError={handleApiLoadError}
         >
           <div style={{ height: "400px", width: "100%" }}>
             <Map
               defaultCenter={center}
-              mapId='MAP_ID'
+              mapId='4ee3add0b5d7a9ee'
               defaultZoom={13}
               gestureHandling={"greedy"}
               disableDefaultUI={true}
