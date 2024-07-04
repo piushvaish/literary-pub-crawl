@@ -1,3 +1,21 @@
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #007bff;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,15 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9f9f9;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    width: 100%;
+    background-color: #f2f2f2;
 }
 
 main {
@@ -22,6 +32,60 @@ main {
     padding: 2rem;
 }
 
+
+section {
+    padding: 40px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+h2 {
+    color: #007bff;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: url('checkmark.png') no-repeat left center;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+
+blockquote p {
+    margin: 0;
+    font-style: italic;
+}
+
+blockquote footer {
+    text-align: right;
+    color: #666;
+    font-size: 0.9em;
+}
+
+app {
+    width: 80%;
+    height: 500px;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9em;
+}
 .features {
     display: flex;
     justify-content: space-between;
@@ -137,8 +201,4 @@ main {
     }
 }
 
-#app {
-    width: 80%;
-    height: 500px;
-    margin: 20px 0;
-}
+
