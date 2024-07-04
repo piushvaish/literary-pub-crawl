@@ -59,6 +59,20 @@ h2 {
     text-align: center;
 }
 
+/* CSS for the link */
+.irish-orange-link {
+    color: #eeaa00;
+    /* Irish Orange color */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+/* CSS for link hover state (optional) */
+.irish-orange-link:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
 /* Feature Section */
 .features {
     display: flex;
