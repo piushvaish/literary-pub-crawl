@@ -29,6 +29,7 @@ const locations: Poi[] = [
   { key: "waterloo", location: { lat: 53.3305, lng: -6.24445 }, name: "Waterloo", description: "Bar known for its live music" },
 ];
 
+
 const MarkerWithInfoWindow = ({ poi }: { poi: Poi }) => {
   const [markerRef, marker] = useAdvancedMarkerRef();
   const [infoWindowShown, setInfoWindowShown] = useState(false);

@@ -21,22 +21,37 @@ limitations under the License.
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <title>Literary Pub Crawl</title>
+    <link rel="stylesheet" href="styles.css">
     <meta
       name="description"
       content="Dublin’s Literary Pub Crawl" />
-    <style>
-      body {
-        margin: 0;
-        font-family: sans-serif;
-      }
-      #app {
-        width: 100vw;
-        height: 100vh;
-      }
-    </style>
+    
   </head>
-  <body>
+  <header>
+    <h1>Location-based audio tours</h1>
+</header>
+<main>
+  
     <div id="app"></div>
     <script type="module" src="./src/app.tsx"></script>
+
+    <section class="features">
+      <div class="feature">
+          <div class="feature-icon" id="icon1"></div>
+          <h2>Don't Miss a Thing</h2>
+          <p>Guiding you to all the best things to see and do.</p>
+      </div>
+      <div class="feature">
+          <div class="feature-icon" id="icon2"></div>
+          <h2>Explore Freely</h2>
+          <p>Freedom to travel at your own pace. Spending more time at places that interest you and bypassing those that don’t.</p>
+      </div>
+      <div class="feature">
+          <div class="feature-icon" id="icon3"></div>
+          <h2>Easy to Use</h2>
+          <p>All commentary autoplays as you walk, based on your GPS location and direction.</p>
+      </div>
+  </section>
+  </main>
   </body>
 </html>
