@@ -157,7 +157,7 @@ const GeolocatedMap = () => {
 
 const App = () => (
   <div>
-    <h1>Geolocated Map</h1>
+    <h2>Your Evening's Itinerary</h2>
     <GeolocatedMap />
   </div>
 );
