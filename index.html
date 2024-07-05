@@ -1,111 +1,156 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Literary Pub Crawl</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="description" content="Dublin's Literary Pub Crawl" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Literary Pub Crawl</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Dublin's Literary Pub Crawl" />
-</head>
-
-<body>
-  <header>
-    <div class="header-content">
-      <h1>Dublin Literary Pub Crawl</h1>
-      <p>Sláinte to Dublin's literary legends!</p>
-    </div>
-  </header>
-  <main>
-    <section id="intro">
-      <h2>Exciting, Surprising, Unforgettable</h2>
-      <p style="text-align: center;">Step into Dublin’s Literary Past with AI-Generated Voices!</p>
-    </section>
-
-    <section id="app">
-      <div id="app"></div>
-      <script type="module" src="./src/app.tsx"></script>
-    </section>
-
-    <section id="instructions">
-      <h2>Getting Started with Our Audio Guide</h2>
-      <p>Use any modern web browser like Chrome or Firefox to access our app. When prompted, allow location access so we can guide you accurately. Look for our app's pin on the map - it'll show you exactly where to go.</p>
-      <p>Found the spot? Great! Tap the pin to reveal a link to your audio guide. The guide is hosted on Google Drive, so you might need to sign in if you're not already logged in.</p>
-      <p>Once you've opened the file, you're all set to start listening. Feel free to adjust the playback speed to whatever feels comfortable - whether you prefer a slower pace or want to zip through. And don't worry if you miss something - you can always rewind and listen again.</p>
-    </section>
-
-    <section id="quotes">
-      <h2>Words of Irish Wisdom</h2>
-      <blockquote>
-        <p>There are no strangers here; Only friends you haven't yet met.</p>
-        <p>— W.B. Yeats, <cite>Irish poet and playwright</cite></p>
-      </blockquote>
-      <blockquote>
-        <p>Life isn’t about finding yourself. Life is about creating yourself.</p>
-        <p>— George Bernard Shaw, <cite>Irish playwright and author</cite></p>
-      </blockquote>
-    </section>
-
-    
-    <section class="features">
-      <div class="feature">
-        <div class="feature-icon" id="icon1"></div>
-        <h2>Literary Landmarks</h2>
-        <p>Discover the haunts of Dublin's most famous writers and the places that inspired their works.</p>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Dublin Literary Pub Crawl</h1>
+        <p>Sláinte to Dublin's literary legends!</p>
       </div>
-      <div class="feature">
-        <div class="feature-icon" id="icon2"></div>
-        <h2>Pub Culture</h2>
-        <p>Experience the unique atmosphere of Dublin's historic pubs, where literary giants once gathered.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon" id="icon3"></div>
-        <h2>Storytelling</h2>
-        <p>Explore Dublin’s literary heritage through AI-guided content, rich with stories and anecdotes.</p>
-      </div>
-    </section>
+    </header>
+    <main>
+      <section id="intro">
+        <h2>Exciting, Surprising, Unforgettable</h2>
+        <p style="text-align: center">
+          Step into Dublin’s Literary Past with AI-Generated Voices!
+        </p>
+      </section>
 
-    <section id="expect">
-      <h2>What to Expect</h2>
-      <ul>
-        <li>Visit iconic pubs frequented by literary legends</li>
-        <li>Hear captivating stories and lesser-known facts about Dublin's writers</li>
-        <li>Explore the charming streets of Dublin's historic city center</li>
-        <li>Optional: Savor a pint of Guinness or other local brews (at your own expense)</li>
-      </ul>
-    </section>
+      <section id="app">
+        <div id="app"></div>
+        <script type="module" src="./src/app.tsx"></script>
+      </section>
 
-    <section id="book">
-      <h2>Book Your Literary Adventure</h2>
-      <h3>Perfect for:</h3>
-      <ul>
-        <li>Literature enthusiasts and book lovers</li>
-        <li>History buffs and culture seekers</li>
-        <li>Visitors looking for a unique Dublin experience</li>
-        <li>Groups, solo travelers, and couples alike</li>
-      </ul>
-      <p>Join us for an evening where every step and sip tells a story. Experience the heart of Dublin's UNESCO City of
-        Literature status.</p>
-      <p><em>Feel the pulse of Dublin's literary scene, sip by sip, story by story.</em></p>
-    </section>
+      <section id="instructions">
+        <h2>Getting Started with Our Audio Guide</h2>
+        <p>
+          Use any modern web browser like Chrome or Firefox to access our app.
+          When prompted, allow location access so we can guide you accurately.
+          Look for our app's pin on the map - it'll show you exactly where to
+          go.
+        </p>
+        <p>
+          Found the spot? Great! Tap the pin to reveal a link to your audio
+          guide. The guide is hosted on Google Drive, so you might need to sign
+          in if you're not already logged in.
+        </p>
+        <p>
+          Once you've opened the file, you're all set to start listening. Feel
+          free to adjust the playback speed to whatever feels comfortable -
+          whether you prefer a slower pace or want to zip through. And don't
+          worry if you miss something - you can always rewind and listen again.
+        </p>
+      </section>
 
-    <section id="donate">
-      <h2>Donate</h2>
-      <p>We hope you've had a great time exploring these landmark pubs and seeing them in a new light. 
-        If you enjoyed the tour, please consider leaving a donation 
-        <a href="https://gofund.me/ab33e101" class="irish-orange-link">by clicking here </a>to help keep these stories alive. 
+      <section id="quotes">
+        <h2>Words of Irish Wisdom</h2>
+        <blockquote>
+          <p>There are no strangers here; Only friends you haven't yet met.</p>
+          <p>— W.B. Yeats, <cite>Irish poet and playwright</cite></p>
+        </blockquote>
+        <blockquote>
+          <p>
+            Life isn’t about finding yourself. Life is about creating yourself.
+          </p>
+          <p>— George Bernard Shaw, <cite>Irish playwright and author</cite></p>
+        </blockquote>
+      </section>
+
+      <section class="features">
+        <div class="feature">
+          <div class="feature-icon" id="icon1"></div>
+          <h2>Literary Landmarks</h2>
+          <p>
+            Discover the haunts of Dublin's most famous writers and the places
+            that inspired their works.
+          </p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon" id="icon2"></div>
+          <h2>Pub Culture</h2>
+          <p>
+            Experience the unique atmosphere of Dublin's historic pubs, where
+            literary giants once gathered.
+          </p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon" id="icon3"></div>
+          <h2>Storytelling</h2>
+          <p>
+            Explore Dublin’s literary heritage through AI-guided content, rich
+            with stories and anecdotes.
+          </p>
+        </div>
+      </section>
+
+      <section id="expect">
+        <h2>What to Expect</h2>
+        <ul>
+          <li>Visit iconic pubs frequented by literary legends</li>
+          <li>
+            Hear captivating stories and lesser-known facts about Dublin's
+            writers
+          </li>
+          <li>Explore the charming streets of Dublin's historic city center</li>
+          <li>
+            Optional: Savor a pint of Guinness or other local brews (at your own
+            expense)
+          </li>
+        </ul>
+      </section>
+
+      <section id="book">
+        <h2>Book Your Literary Adventure</h2>
+        <h3>Perfect for:</h3>
+        <ul>
+          <li>Literature enthusiasts and book lovers</li>
+          <li>History buffs and culture seekers</li>
+          <li>Visitors looking for a unique Dublin experience</li>
+          <li>Groups, solo travelers, and couples alike</li>
+        </ul>
+        <p>
+          Join us for an evening where every step and sip tells a story.
+          Experience the heart of Dublin's UNESCO City of Literature status.
+        </p>
+        <p>
+          <em
+            >Feel the pulse of Dublin's literary scene, sip by sip, story by
+            story.</em
+          >
+        </p>
+      </section>
+
+      <section id="donate">
+        <h2>Donate</h2>
+        <p>
+          We hope you've had a great time exploring these landmark pubs and
+          seeing them in a new light. If you enjoyed the tour, please consider
+          leaving a donation
+          <a href="https://gofund.me/ab33e101" class="irish-orange-link"
+            >by clicking here </a
+          >to help keep these stories alive.
+        </p>
+      </section>
+
+      <section id="share-component"></section>
+    </main>
+    <footer>
+      <p>
+        © SocialEvents. All rights reserved. |
+        <a href="#" class="irish-orange-link">Privacy Policy</a> |
+        <a href="#" class="irish-orange-link">Terms of Service</a>
       </p>
-        
-    </section>
-
-    <section id="share-component"></section>
-
-  </main>
-  <footer>
-    <p>© SocialEvents. All rights reserved. | <a href="#" class="irish-orange-link">Privacy Policy</a> | <a href="#"
-        class="irish-orange-link">Terms of Service</a></p>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>

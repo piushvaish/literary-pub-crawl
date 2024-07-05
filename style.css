@@ -1,292 +1,292 @@
 /* Global Styles */
 :root {
-    --irish-green: #169B62;
-    --irish-white: #ffffff;
-    --irish-orange: #FF883E;
-    --text-color: #333333;
+  --irish-green: #169b62;
+  --irish-white: #ffffff;
+  --irish-orange: #ff883e;
+  --text-color: #333333;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    background-color: var(--irish-white);
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  background-color: var(--irish-white);
 }
 
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: var(--irish-white);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--irish-white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Header Styles */
 header {
-    background-color: var(--irish-green);
-    color: var(--irish-white);
-    padding: 2rem 0;
-    text-align: center;
+  background-color: var(--irish-green);
+  color: var(--irish-white);
+  padding: 2rem 0;
+  text-align: center;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    font-weight: 700;
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: 700;
 }
 
 header p {
-    font-size: 1.2em;
-    margin-top: 0.5rem;
+  font-size: 1.2em;
+  margin-top: 0.5rem;
 }
 
 /* Section Styles */
 section {
-    padding: 3rem 0;
-    border-bottom: 1px solid var(--irish-green);
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--irish-green);
 }
 
 section:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 h2 {
-    color: var(--irish-green);
-    font-size: 2em;
-    margin-bottom: 1.5rem;
-    text-align: center;
+  color: var(--irish-green);
+  font-size: 2em;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 /* CSS for the link */
 .irish-orange-link {
-    color: #eeaa00;
-    /* Irish Orange color */
-    text-decoration: none;
-    /* Remove underline */
+  color: #eeaa00;
+  /* Irish Orange color */
+  text-decoration: none;
+  /* Remove underline */
 }
 
 /* CSS for link hover state (optional) */
 .irish-orange-link:hover {
-    text-decoration: underline;
-    /* Underline on hover */
+  text-decoration: underline;
+  /* Underline on hover */
 }
 
 /* Feature Section */
 .features {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    margin-top: 2rem;
-    gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  gap: 1rem;
 }
 
 .feature {
-    flex: 1;
-    background-color: var(--irish-white);
-    border: 2px solid var(--irish-green);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  flex: 1;
+  background-color: var(--irish-white);
+  border: 2px solid var(--irish-green);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .feature:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .feature-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 1rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: var(--irish-white);
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--irish-white);
 }
 
 #icon1 {
-    background-color: var(--irish-green);
+  background-color: var(--irish-green);
 }
 
 #icon2 {
-    background-color: var(--irish-white);
-    color: var(--irish-orange);
+  background-color: var(--irish-white);
+  color: var(--irish-orange);
 }
 
 #icon3 {
-    background-color: var(--irish-orange);
+  background-color: var(--irish-orange);
 }
 
 .feature h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--irish-green);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--irish-green);
 }
 
 .feature p {
-    font-size: 1rem;
-    color: var(--text-color);
+  font-size: 1rem;
+  color: var(--text-color);
 }
 
 /* Quote Styles */
 blockquote {
-    background: var(--irish-white);
-    border-left: 5px solid var(--irish-orange);
-    margin: 1.5rem 0;
-    padding: 1.5rem;
-    font-style: italic;
-    position: relative;
+  background: var(--irish-white);
+  border-left: 5px solid var(--irish-orange);
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  font-style: italic;
+  position: relative;
 }
 
 blockquote::before {
-    content: '"';
-    font-size: 4em;
-    font-family: Georgia, serif;
-    color: var(--irish-green);
-    opacity: 0.3;
-    position: absolute;
-    top: -10px;
-    left: 10px;
+  content: '"';
+  font-size: 4em;
+  font-family: Georgia, serif;
+  color: var(--irish-green);
+  opacity: 0.3;
+  position: absolute;
+  top: -10px;
+  left: 10px;
 }
 
 blockquote p {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
 }
 
 blockquote footer {
-    margin-top: 0.5rem;
-    font-weight: bold;
-    text-align: right;
-    color: var(--irish-green);
+  margin-top: 0.5rem;
+  font-weight: bold;
+  text-align: right;
+  color: var(--irish-green);
 }
 
 blockquote footer cite {
-    font-style: normal;
-    font-weight: normal;
-    color: var(--text-color);
+  font-style: normal;
+  font-weight: normal;
+  color: var(--text-color);
 }
 
 /* List Styles */
 ul {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 ul li {
-    background: url('images/shamrock.png') no-repeat left 5px;
-    background-size: 20px;
-    padding-left: 30px;
-    margin-bottom: 0.75rem;
-    line-height: 1.4;
+  background: url("images/shamrock.png") no-repeat left 5px;
+  background-size: 20px;
+  padding-left: 30px;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
 }
 
 /* App Section */
 #app {
-    width: 100%;
-    height: 500px;
-    margin: 2rem 0;
-    background-color: var(--irish-white);
-    border: 1px solid var(--irish-green);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 500px;
+  margin: 2rem 0;
+  background-color: var(--irish-white);
+  border: 1px solid var(--irish-green);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* ShareComponent Styles */
 /* ShareComponent Styles */
 .share-section {
-    text-align: center;
-    padding: 2rem 0;
-    background-color: var(--irish-white);
-    border-top: 2px solid var(--irish-green);
-    border-bottom: 2px solid var(--irish-green);
-    margin: 2rem 0;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: var(--irish-white);
+  border-top: 2px solid var(--irish-green);
+  border-bottom: 2px solid var(--irish-green);
+  margin: 2rem 0;
+}
+
+.share-section h2 {
+  color: var(--irish-green);
+  font-size: 1.8em;
+  margin-bottom: 1rem;
+}
+
+.share-section p {
+  color: var(--text-color);
+  font-size: 1.1em;
+  margin-bottom: 1.5rem;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.share-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.share-buttons button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Responsive design for share buttons */
+@media (max-width: 480px) {
+  .share-buttons button svg {
+    width: 40px !important;
+    height: 40px !important;
   }
-  
-  .share-section h2 {
-    color: var(--irish-green);
-    font-size: 1.8em;
-    margin-bottom: 1rem;
-  }
-  
-  .share-section p {
-    color: var(--text-color);
-    font-size: 1.1em;
-    margin-bottom: 1.5rem;
-  }
-  
-  .share-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .share-buttons button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .share-buttons button:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
-  
-  /* Responsive design for share buttons */
-  @media (max-width: 480px) {
-    .share-buttons button svg {
-      width: 40px !important;
-      height: 40px !important;
-    }
-  } 
+}
 
 /* Footer Styles */
 footer {
-    background-color: var(--irish-green);
-    color: var(--irish-white);
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+  background-color: var(--irish-green);
+  color: var(--irish-white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .features {
-        flex-wrap: wrap;
-    }
+  .features {
+    flex-wrap: wrap;
+  }
 
-    .feature {
-        flex-basis: 100%;
-        margin-bottom: 1rem;
-    }
+  .feature {
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+  }
 
-    header h1 {
-        font-size: 2rem;
-    }
+  header h1 {
+    font-size: 2rem;
+  }
 
-    section {
-        padding: 2rem 0;
-    }
+  section {
+    padding: 2rem 0;
+  }
 }
 
 @media (max-width: 480px) {
-    main {
-        padding: 1rem;
-    }
+  main {
+    padding: 1rem;
+  }
 
-    header h1 {
-        font-size: 1.5rem;
-    }
+  header h1 {
+    font-size: 1.5rem;
+  }
 
-    .feature-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
-    }
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
 }

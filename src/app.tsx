@@ -1,7 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { createRoot } from "react-dom/client";
 import { useGeolocated } from "react-geolocated";
-import { FacebookShareButton, WhatsappShareButton, FacebookIcon, WhatsappIcon } from 'react-share';
+import {
+  FacebookShareButton,
+  WhatsappShareButton,
+  FacebookIcon,
+  WhatsappIcon,
+} from "react-share";
 import {
   APIProvider,
   Map,
@@ -9,7 +14,7 @@ import {
   AdvancedMarker,
   Pin,
   InfoWindow,
-  useAdvancedMarkerRef
+  useAdvancedMarkerRef,
 } from "@vis.gl/react-google-maps";
 
 type Poi = {
@@ -20,23 +25,95 @@ type Poi = {
 };
 
 const locations: Poi[] = [
-  { key: "bleedingHorse", location: { lat: 53.33354, lng: -6.2649 }, name: "Bleeding Horse", description: <a href="https://bit.ly/bleedinghorse" class="irish-orange-link">Traditinal bar in high ceilinged historic building with two wooden balconies and large windows.</a> },
-  { key: "D2", location: { lat: 53.33438, lng: -6.26288 }, name: "D2", description:<a href="https://bit.ly/bleedinghorse" class="irish-orange-link">Buzzing bar with small menu, all weather, rock walled garden and club.</a> },
-  { key: "nearys", location: { lat: 53.34074, lng: -6.26119 }, name: "Neary's", description: "Traditional Irish pub" },
-  { key: "davyByrnes", location: { lat: 53.34183, lng: -6.25936 }, name: "Davy Byrnes", description: "Famous for its mention in James Joyce's Ulysses" },
-  { key: "duke", location: { lat: 53.34195, lng: -6.25869 }, name: "The Duke", description: "Popular pub on Duke Street" },
-  { key: "mcdaids", location: { lat: 53.34125, lng: -6.261 }, name: "McDaid's", description: "Literary pub frequented by famous Irish writers" },
-  { key: "toners", location: { lat: 53.33775, lng: -6.25242 }, name: "Toner's", description: "One of Dublin's oldest and most famous pubs" },
-  { key: "waterloo", location: { lat: 53.3305, lng: -6.24445 }, name: "Waterloo", description: "Bar known for its live music" },
+  {
+    key: "bleedingHorse",
+    location: { lat: 53.33354, lng: -6.2649 },
+    name: "Bleeding Horse",
+    description: (
+      <a href="https://bit.ly/bleedinghorse" class="irish-orange-link">
+        Traditinal bar in high ceilinged historic building with two wooden
+        balconies and large windows.
+      </a>
+    ),
+  },
+  {
+    key: "D2",
+    location: { lat: 53.33438, lng: -6.26288 },
+    name: "D2",
+    description: (
+      <a href="https://bit.ly/bleedinghorse" class="irish-orange-link">
+        Buzzing bar with rock walled garden and club.
+      </a>
+    ),
+  },
+  {
+    key: "nearys",
+    location: { lat: 53.34074, lng: -6.26119 },
+    name: "Neary's",
+    description: (
+      <a href="https://bit.ly/neary_pub" class="irish-orange-link">
+        Traditional Irish pub
+      </a>
+    ),
+  },
+  {
+    key: "davyByrnes",
+    location: { lat: 53.34183, lng: -6.25936 },
+    name: "Davy Byrnes",
+    description: (
+      <a href="https://bit.ly/davybyrnes_pub" class="irish-orange-link">
+        Famous for its mention in James Joyce's Ulysses
+      </a>
+    ),
+  },
+  {
+    key: "duke",
+    location: { lat: 53.34195, lng: -6.25869 },
+    name: "The Duke",
+    description: (
+      <a href="https://bit.ly/duke_pub" class="irish-orange-link">
+        Popular pub on Duke Street
+      </a>
+    ),
+  },
+  {
+    key: "mcdaids",
+    location: { lat: 53.34125, lng: -6.261 },
+    name: "McDaid's",
+    description: (
+      <a href="https://bit.ly/mcdaids" class="irish-orange-link">
+        Literary pub frequented by famous Irish writers
+      </a>
+    ),
+  },
+  {
+    key: "toners",
+    location: { lat: 53.33775, lng: -6.25242 },
+    name: "Toner's",
+    description: (
+      <a href="https://bit.ly/toners_pub" class="irish-orange-link">
+        One of Dublin's oldest and most famous pubs
+      </a>
+    ),
+  },
+  {
+    key: "waterloo",
+    location: { lat: 53.3305, lng: -6.24445 },
+    name: "Waterloo",
+    description: (
+      <a href="https://bit.ly/waterloo_pub" class="irish-orange-link">
+        Bar known for its live music
+      </a>
+    ),
+  },
 ];
-
 
 const MarkerWithInfoWindow = ({ poi }: { poi: Poi }) => {
   const [markerRef, marker] = useAdvancedMarkerRef();
   const [infoWindowShown, setInfoWindowShown] = useState(false);
 
   const handleMarkerClick = useCallback(
-    () => setInfoWindowShown(isShown => !isShown),
+    () => setInfoWindowShown((isShown) => !isShown),
     []
   );
 
@@ -49,11 +126,7 @@ const MarkerWithInfoWindow = ({ poi }: { poi: Poi }) => {
         position={poi.location}
         onClick={handleMarkerClick}
       >
-        <Pin
-          background={"#08a04b"}
-          glyphColor={"#000"}
-          borderColor={"#000"}
-        />
+        <Pin background={"#08a04b"} glyphColor={"#000"} borderColor={"#000"} />
       </AdvancedMarker>
 
       {infoWindowShown && (
@@ -131,14 +204,14 @@ const GeolocatedMap = () => {
     <div>
       {center ? (
         <APIProvider
-          apiKey={process.env.REACT_APP_GOOGLEPLACES_API_KEY || ''}
+          apiKey={process.env.REACT_APP_GOOGLEPLACES_API_KEY || ""}
           onLoad={handleApiLoaded}
           onError={handleApiLoadError}
         >
           <div style={{ height: "400px", width: "100%" }}>
             <Map
               defaultCenter={center}
-              mapId='4ee3add0b5d7a9ee'
+              mapId="4ee3add0b5d7a9ee"
               defaultZoom={13}
               gestureHandling={"greedy"}
               disableDefaultUI={true}
@@ -159,12 +232,18 @@ const GeolocatedMap = () => {
 // Get the URL and title of the current page dynamically
 const ShareComponent = () => {
   const shareUrl = typeof window !== "undefined" ? window.location.href : "";
-  const title = typeof document !== "undefined" ? document.title : "Check out this awesome Dublin Literary Pub Crawl!";
+  const title =
+    typeof document !== "undefined"
+      ? document.title
+      : "Check out this awesome Dublin Literary Pub Crawl!";
 
   return (
     <section id="share" className="share-section">
       <h2>Spread the Literary Love!</h2>
-      <p>Enjoyed your virtual pub crawl? Share this literary adventure with your friends and family!</p>
+      <p>
+        Enjoyed your virtual pub crawl? Share this literary adventure with your
+        friends and family!
+      </p>
       <div className="share-buttons">
         <FacebookShareButton url={shareUrl} quote={title}>
           <FacebookIcon size={48} round />
@@ -177,13 +256,11 @@ const ShareComponent = () => {
   );
 };
 
-
 const App = () => (
   <div>
     <h2>Your Evening's Itinerary</h2>
     <GeolocatedMap />
   </div>
-
 );
 
 const root = createRoot(document.getElementById("app")!);
