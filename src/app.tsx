@@ -20,8 +20,8 @@ type Poi = {
 };
 
 const locations: Poi[] = [
-  { key: "bleedingHorse", location: { lat: 53.33354, lng: -6.2649 }, name: "Bleeding Horse", description: "Historic pub on Camden Street" },
-  { key: "D2", location: { lat: 53.33438, lng: -6.26288 }, name: "D2", description: "Nightclub on Harcourt Street" },
+  { key: "bleedingHorse", location: { lat: 53.33354, lng: -6.2649 }, name: "Bleeding Horse", description: "https://bit.ly/bleedinghorse" },
+  { key: "D2", location: { lat: 53.33438, lng: -6.26288 }, name: "D2", description: "https://bit.ly/d2_bar" },
   { key: "nearys", location: { lat: 53.34074, lng: -6.26119 }, name: "Neary's", description: "Traditional Irish pub" },
   { key: "davyByrnes", location: { lat: 53.34183, lng: -6.25936 }, name: "Davy Byrnes", description: "Famous for its mention in James Joyce's Ulysses" },
   { key: "duke", location: { lat: 53.34195, lng: -6.25869 }, name: "The Duke", description: "Popular pub on Duke Street" },
