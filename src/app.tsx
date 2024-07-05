@@ -20,8 +20,8 @@ type Poi = {
 };
 
 const locations: Poi[] = [
-  { key: "bleedingHorse", location: { lat: 53.33354, lng: -6.2649 }, name: "Bleeding Horse", description: "https://bit.ly/bleedinghorse" },
-  { key: "D2", location: { lat: 53.33438, lng: -6.26288 }, name: "D2", description: "https://bit.ly/d2_bar" },
+  { key: "bleedingHorse", location: { lat: 53.33354, lng: -6.2649 }, name: "Bleeding Horse", description: <a href="https://bit.ly/bleedinghorse" class="irish-orange-link">Traditinal bar in high ceilinged historic building with two wooden balconies and large windows.</a> },
+  { key: "D2", location: { lat: 53.33438, lng: -6.26288 }, name: "D2", description:<a href="https://bit.ly/bleedinghorse" class="irish-orange-link">Buzzing bar with small menu, all weather, rock walled garden and club.</a> },
   { key: "nearys", location: { lat: 53.34074, lng: -6.26119 }, name: "Neary's", description: "Traditional Irish pub" },
   { key: "davyByrnes", location: { lat: 53.34183, lng: -6.25936 }, name: "Davy Byrnes", description: "Famous for its mention in James Joyce's Ulysses" },
   { key: "duke", location: { lat: 53.34195, lng: -6.25869 }, name: "The Duke", description: "Popular pub on Duke Street" },
@@ -156,34 +156,34 @@ const GeolocatedMap = () => {
   );
 };
 
-  // Get the URL and title of the current page dynamically
-  const ShareComponent = () => {
-    const shareUrl = typeof window !== "undefined" ? window.location.href : "";
-    const title = typeof document !== "undefined" ? document.title : "Check out this awesome Dublin Literary Pub Crawl!";
-  
-    return (
-      <section id="share" className="share-section">
-        <h2>Spread the Literary Love!</h2>
-        <p>Enjoyed your virtual pub crawl? Share this literary adventure with your friends and family!</p>
-        <div className="share-buttons">
-          <FacebookShareButton url={shareUrl} quote={title}>
-            <FacebookIcon size={48} round />
-          </FacebookShareButton>
-          <WhatsappShareButton url={shareUrl} title={title}>
-            <WhatsappIcon size={48} round />
-          </WhatsappShareButton>
-        </div>
-      </section>
-    );
-  };
+// Get the URL and title of the current page dynamically
+const ShareComponent = () => {
+  const shareUrl = typeof window !== "undefined" ? window.location.href : "";
+  const title = typeof document !== "undefined" ? document.title : "Check out this awesome Dublin Literary Pub Crawl!";
 
-  
+  return (
+    <section id="share" className="share-section">
+      <h2>Spread the Literary Love!</h2>
+      <p>Enjoyed your virtual pub crawl? Share this literary adventure with your friends and family!</p>
+      <div className="share-buttons">
+        <FacebookShareButton url={shareUrl} quote={title}>
+          <FacebookIcon size={48} round />
+        </FacebookShareButton>
+        <WhatsappShareButton url={shareUrl} title={title}>
+          <WhatsappIcon size={48} round />
+        </WhatsappShareButton>
+      </div>
+    </section>
+  );
+};
+
+
 const App = () => (
   <div>
     <h2>Your Evening's Itinerary</h2>
     <GeolocatedMap />
   </div>
-  
+
 );
 
 const root = createRoot(document.getElementById("app")!);
