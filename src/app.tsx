@@ -30,7 +30,7 @@ const locations: Poi[] = [
     location: { lat: 53.33354, lng: -6.2649 },
     name: "Bleeding Horse",
     description: (
-      <a href="https://bit.ly/bleedinghorse" class="irish-orange-link">
+      <a href="https://drive.google.com/file/d/1ckc83S8PqdK4tIndMeqQtzdVpOaZ3q1C/view?usp=drive_link" class="irish-orange-link">
         Traditinal bar in high ceilinged historic building with two wooden
         balconies and large windows.
       </a>
@@ -41,7 +41,7 @@ const locations: Poi[] = [
     location: { lat: 53.33438, lng: -6.26288 },
     name: "D2",
     description: (
-      <a href="https://bit.ly/d2_bar" class="irish-orange-link">
+      <a href="https://drive.google.com/file/d/1Y6iMZ_PZ4p0G7bvlQi5Tjh9BMNBRNNfq/view?usp=drive_link" class="irish-orange-link">
         Buzzing bar with rock walled garden and club.
       </a>
     ),
@@ -51,7 +51,7 @@ const locations: Poi[] = [
     location: { lat: 53.34074, lng: -6.26119 },
     name: "Neary's",
     description: (
-      <a href="https://bit.ly/neary_pub" class="irish-orange-link">
+      <a href="https://drive.google.com/file/d/1v9yuevXkVFZxe8xcsCBxsny69I_6hXbB/view?usp=drive_link" class="irish-orange-link">
         Traditional Irish pub
       </a>
     ),
@@ -61,7 +61,7 @@ const locations: Poi[] = [
     location: { lat: 53.34183, lng: -6.25936 },
     name: "Davy Byrnes",
     description: (
-      <a href="https://bit.ly/davybyrnes_pub" class="irish-orange-link">
+      <a href="https://drive.google.com/file/d/1FpicQ5_LrWqmQZAFe626VQvFNASutZK1/view?usp=drive_link" class="irish-orange-link">
         Famous for its mention in James Joyce's Ulysses
       </a>
     ),
@@ -71,7 +71,7 @@ const locations: Poi[] = [
     location: { lat: 53.34195, lng: -6.25869 },
     name: "The Duke",
     description: (
-      <a href="https://bit.ly/duke_pub" class="irish-orange-link">
+      <a href="https://drive.google.com/file/d/1BTTMoFhngSNItaFgqTqIyKB4Lm4uciU0/view?usp=drive_link" class="irish-orange-link">
         Popular pub on Duke Street
       </a>
     ),
@@ -81,7 +81,7 @@ const locations: Poi[] = [
     location: { lat: 53.34125, lng: -6.261 },
     name: "McDaid's",
     description: (
-      <a href="https://bit.ly/mcdaids" class="irish-orange-link">
+      <a href="https://drive.google.com/file/d/1QiCqeOJ-zqlenSClmgWaP1dohlWxm0k7/view?usp=drive_link" class="irish-orange-link">
         Literary pub frequented by famous Irish writers
       </a>
     ),
@@ -91,7 +91,7 @@ const locations: Poi[] = [
     location: { lat: 53.33775, lng: -6.25242 },
     name: "Toner's",
     description: (
-      <a href="https://bit.ly/toners_pub" class="irish-orange-link">
+      <a href="https://drive.google.com/file/d/1t1u5yyrreUkQCRDFg_i2_OT9OtCCqR9r/view?usp=drive_link" class="irish-orange-link">
         One of Dublin's oldest and most famous pubs
       </a>
     ),
@@ -101,7 +101,7 @@ const locations: Poi[] = [
     location: { lat: 53.3305, lng: -6.24445 },
     name: "Waterloo",
     description: (
-      <a href="https://bit.ly/waterloo_pub" class="irish-orange-link">
+      <a href="https://drive.google.com/file/d/1rqUKCyZz4Yhwi9nHW1xN0odKR64u7stJ/view?usp=drive_link" class="irish-orange-link">
         Bar known for its live music
       </a>
     ),
