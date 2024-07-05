@@ -4,8 +4,13 @@ import { useGeolocated } from "react-geolocated";
 import {
   FacebookShareButton,
   WhatsappShareButton,
+  EmailShareButton,
+  LinkedinShareButton,
   FacebookIcon,
   WhatsappIcon,
+  EmailIcon,
+  LinkedinIcon
+
 } from "react-share";
 import {
   APIProvider,
@@ -241,7 +246,7 @@ const ShareComponent = () => {
     <section id="share" className="share-section">
       <h2>Spread the Literary Love!</h2>
       <p>
-        Enjoyed your virtual pub crawl? Share this literary adventure with your
+        Enjoyed your pub crawl? Share this literary adventure with your
         friends and family!
       </p>
       <div className="share-buttons">
@@ -251,6 +256,12 @@ const ShareComponent = () => {
         <WhatsappShareButton url={shareUrl} title={title}>
           <WhatsappIcon size={48} round />
         </WhatsappShareButton>
+        <EmailShareButton url={shareUrl} title={title}>
+          <EmailIcon size={48} round />
+        </EmailShareButton>
+        <LinkedinShareButton url={shareUrl} title={title}>
+          <LinkedinIcon size={48} round />
+        </LinkedinShareButton>
       </div>
     </section>
   );
