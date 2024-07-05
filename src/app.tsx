@@ -41,7 +41,7 @@ const locations: Poi[] = [
     location: { lat: 53.33438, lng: -6.26288 },
     name: "D2",
     description: (
-      <a href="https://bit.ly/bleedinghorse" class="irish-orange-link">
+      <a href="https://bit.ly/d2_bar" class="irish-orange-link">
         Buzzing bar with rock walled garden and club.
       </a>
     ),
