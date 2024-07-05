@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { createRoot } from "react-dom/client";
 import { useGeolocated } from "react-geolocated";
+import { FacebookShareButton, WhatsappShareButton, FacebookIcon, WhatsappIcon } from 'react-share';
 import {
   APIProvider,
   Map,
@@ -155,14 +156,41 @@ const GeolocatedMap = () => {
   );
 };
 
+  // Get the URL and title of the current page dynamically
+  const ShareComponent = () => {
+    const shareUrl = typeof window !== "undefined" ? window.location.href : "";
+    const title = typeof document !== "undefined" ? document.title : "Check out this awesome Dublin Literary Pub Crawl!";
+  
+    return (
+      <section id="share" className="share-section">
+        <h2>Spread the Literary Love!</h2>
+        <p>Enjoyed your virtual pub crawl? Share this literary adventure with your friends and family!</p>
+        <div className="share-buttons">
+          <FacebookShareButton url={shareUrl} quote={title}>
+            <FacebookIcon size={48} round />
+          </FacebookShareButton>
+          <WhatsappShareButton url={shareUrl} title={title}>
+            <WhatsappIcon size={48} round />
+          </WhatsappShareButton>
+        </div>
+      </section>
+    );
+  };
+
+  
 const App = () => (
   <div>
     <h2>Your Evening's Itinerary</h2>
     <GeolocatedMap />
   </div>
+  
 );
 
 const root = createRoot(document.getElementById("app")!);
 root.render(<App />);
+
+// Render ShareComponent separately
+const shareRoot = createRoot(document.getElementById("share-component")!);
+shareRoot.render(<ShareComponent />);
 
 export default App;
