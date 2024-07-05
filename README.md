@@ -15,8 +15,6 @@ Welcome to the Literary Pub Crawl project! This repository contains a web applic
 
 - **Interactive Map**: View and explore a map of literary-themed pubs and bars.
 - **Pub Details**: Get detailed information about each location, including history, notable literary connections, and reviews.
-- **User Reviews**: Leave and read reviews from other users to enhance your experience.
-- **Search Functionality**: Easily find pubs by name, location, or literary connection.
 - **Responsive Design**: Access the application on both desktop and mobile devices.
 
 ## Installation
