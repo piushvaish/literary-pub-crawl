@@ -213,7 +213,7 @@ const GeolocatedMap = () => {
           onLoad={handleApiLoaded}
           onError={handleApiLoadError}
         >
-          <div style={{ height: "600px", width: "100%" }}>
+          <div style={{ height: "500px", width: "100%" }}>
             <Map
               defaultCenter={center}
               mapId="4ee3add0b5d7a9ee"
