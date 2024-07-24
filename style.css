@@ -188,12 +188,12 @@ ul li {
 /* App Section */
 #app {
   width: 100%;
-  height: 500px;
+  height: 600px;
   margin: 2rem 0;
   background-color: var(--irish-white);
   border: 1px solid var(--irish-green);
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* ShareComponent Styles */
