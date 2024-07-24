@@ -269,7 +269,7 @@ const ShareComponent = () => {
 
 const App = () => (
   <div>
-    <h3>Your Itinerary</h3>
+    <h2>Dublin's Literary Pub Crawl</h2>
     <GeolocatedMap />
   </div>
 );
